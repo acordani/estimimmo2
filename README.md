@@ -37,3 +37,39 @@ git push heroku master
 ```
 
 Et ```heroku open``` pour voir le site
+
+Ajout des gems de debug dans le gemfile
+
+```
+  gem 'better_errors'
+  gem 'binding_of_caller'
+ ```
+
+Ajout du controller de pages
+
+```
+rails g controller pages
+```
+
+dans Pages_controller, ajouter la methode home:
+
+```
+def home
+end
+```
+
+Ajouter la route home dans config/routes
+
+```
+root to: 'pages#home'
+```
+
+Et Ajouter la page home.html.erb dans views/pages
+
+```
+<h1>Estimer votre bien immobilier</h1>
+ <p>Sur Saint Maur Des Fossés</p>
+```
+
+
+
