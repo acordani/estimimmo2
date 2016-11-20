@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(function(){
       $(".element").typed({
-          strings: ["Saint-Maur-Des-Fossés.", "La Varenne Saint Hilaire."],
+          strings: ["appartement.", "maison.", "local commercial.", "terrain à batir."],
           loop: false,
           // time before typing starts
           startDelay: 50,
@@ -9,7 +9,7 @@ $(document).ready(function(){
           backSpeed: 100,
           typeSpeed: 50,
           // loop
-          loop: false,
+          loop: true,
       });
   });
 });
