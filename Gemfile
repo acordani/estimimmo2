@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-plugin'
+end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -8,6 +12,12 @@ gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
+
+gem "font-awesome-sass"
+gem "simple_form"
+
+gem 'bootstrap-sass', '~> 3.3.6'
+
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
