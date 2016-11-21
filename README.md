@@ -1,3 +1,7 @@
+```
+rails new estimimmo2 -T --database=postgresql
+```
+
 ```bash
 git init
 git add .
