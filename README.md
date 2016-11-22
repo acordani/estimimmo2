@@ -74,6 +74,10 @@ Et Ajouter la page home.html.erb dans views/pages
 <h1>Estimer votre bien immobilier</h1>
  <p>Sur Saint Maur Des Fossés</p>
 ```
+Model Estimation
 
+```
+rails g model Estimation address:string city:string latitude:float longitude:float year_construction:string surface_carrez:string bathroom:string bedroom:string rooms:string surface_habitation:string
+```
 
 
