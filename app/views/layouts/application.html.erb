@@ -16,3 +16,30 @@
 
 </body>
 </html>
+
+<!-- ###### LOG IN MODAL #####-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"><h2 class="text-center black ">Connexion</h2>
+      </div>
+      <div class="modal-body">
+        <%= form_for(:user, url: session_path(:user)) do |f| %>
+          <%= f.label "Adresse email:", :email, class:'black' %>
+          <%= f.text_field :email, class: "form-control", style: "margin-bottom:25px" %>
+          <%= f.label :password_field, "Mot de passe:", class:'black' %>
+          <%= f.password_field :password, label: "Mot de passe", class: "form-control", style: "margin-bottom:25px" %>
+          <%= f.submit 'Connexion', class: "form-control black" %>
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me , "Se souvenir de moi" %>
+          <%= link_to "Mot de passe oublié ?", new_password_path(:user) %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ##### SIGN UP MODAL ###### -->

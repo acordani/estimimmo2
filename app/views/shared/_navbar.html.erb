@@ -7,14 +7,7 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-
+   
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
@@ -52,8 +45,13 @@
 
     <% else %>
 
-      <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <!-- Login text link -->
+        <li class= "list-style-type mr-15">
+              <%= link_to 'Connexion', "#", data: {toggle: "modal", target: "#myModal"} %>
+            </li>
+            <li class= "list-style-type">
+              <%= link_to 'Inscription', "#", data: {toggle: "modal", target: "#myModal2"} %>
+            </li>
 
     <% end %>
 
