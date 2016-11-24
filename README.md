@@ -48,6 +48,12 @@ Ajout des gems de debug dans le gemfile
   gem 'better_errors'
   gem 'binding_of_caller'
  ```
+ 
+ Création de la base de données:
+ ```
+ rake db:create
+ ```
+ 
 
 Ajout du controller de pages
 
