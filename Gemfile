@@ -4,6 +4,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-plugin'
 end
 
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -20,7 +24,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+# gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -35,6 +39,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem "letter_opener", group: :development
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,6 +49,12 @@ gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Geocoder
+gem "coffee-rails"
+gem "gmaps4rails"
+gem "geocoder"
+gem 'country_select'
 
 gem 'better_errors'
 gem 'binding_of_caller'

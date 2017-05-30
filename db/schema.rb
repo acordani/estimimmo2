@@ -11,10 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120180016) do
+ActiveRecord::Schema.define(version: 20170528073606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "estimations", force: :cascade do |t|
+    t.string   "address"
+    t.string   "city"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "year_construction"
+    t.string   "surface_carrez"
+    t.string   "bathroom"
+    t.string   "bedroom"
+    t.string   "rooms"
+    t.string   "surface_habitation"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "zip_code"
+    t.string   "country"
+    t.integer  "price"
+    t.integer  "price_id"
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.integer  "price_min_house"
+    t.integer  "price_average_house"
+    t.integer  "price_max_house"
+    t.string   "street"
+    t.string   "city"
+    t.string   "type_of_street"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "slug"
+    t.string   "address"
+    t.string   "zip_code"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

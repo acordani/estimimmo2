@@ -1,0 +1,33 @@
+<h1>Estimation Immobilière Gratuite</h1>
+
+<p>Notre estimation est basé sur une connaissance parfaite de la commune de Saint-Maur des Fossés grâce à plus de 15 années d'experience.</p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Adresse du bien
+				</div>
+				<div class="panel-body">
+					<div class="container">
+						<%= simple_form_for @estimation do |f| %>
+							<div class="row">
+								<div class="col-md-4">
+									<%= f.input :address %>
+									<%= f.input :zip_code %>
+        							<%= f.input :city %>
+        							<%= f.input :country, priority: [ 'FR' ] %>
+								</div>
+							</div>
+							<%= f.submit class: 'btn btn-primary' %>
+						<% end %>
+			</div>	</div>
+		</div>
+	</div>
+
+
+<%= content_for(:after_js) do %>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyAM4X7NgRcGvTeQDuodHhdS5bgt7vGvcBU"></script>
+<% end %>
+
+
